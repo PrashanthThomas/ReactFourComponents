@@ -6,12 +6,16 @@ import ClickCounter from "./Components/ClickCounter";
 import MenuSideBar from "./Components/MenuSideBar/MenuSideBar";
 import "bootstrap/dist/css/bootstrap.css";
 import Message from "./Components/Message";
+import Alert from "./Components/Alert";
 
 function App() {
   let cities = ["Bangalore", "Mangalore", "Delhi"];
   let fruits = ["Apple", "Grapes"];
   return (
-    <div>
+    <div className="outer-layer">
+      <Alert>
+        <h1>Custom Message</h1>
+      </Alert>
       <ClickCounter></ClickCounter>
       <CustomHeader></CustomHeader>
       <MenuSideBar title="Fruit list" fruits={fruits}></MenuSideBar>
