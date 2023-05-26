@@ -14,20 +14,13 @@ function MenuSideBar() {
       {cities.length === 0 && <p>No cities to display</p>}
       <ul className="list-group">
         {cities.map((city, index) => {
-          if (index === selectedIndex) {
-            return (
-              <li
-                className="list-group-item active"
-                key={index}
-                onClick={handleEvent}
-              >
-                {city}
-              </li>
-            );
-          }
           return (
             <li
-              className="list-group-item"
+              className={
+                selectedIndex === index
+                  ? "list-group-item active"
+                  : "list-group-item"
+              }
               key={index}
               onClick={() => setSelectedIndex(index)}
             >
