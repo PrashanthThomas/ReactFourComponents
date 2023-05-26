@@ -1,8 +1,12 @@
 import { MouseEvent, useState } from "react";
 
-function MenuSideBar() {
+interface Props {
+  title: string;
+  fruits: string[];
+}
+
+function MenuSideBar(props: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  let cities = ["Bangalore", "Mangalore", "Delhi"];
   const handleEvent = (event: MouseEvent) => {
     console.log(event);
     console.log("Text Content:" + " " + event.target.textContent);
@@ -10,10 +14,10 @@ function MenuSideBar() {
   // cities = [];
   return (
     <>
-      <h1>City list</h1>
-      {cities.length === 0 && <p>No cities to display</p>}
+      <h1>{props.title}</h1>
+      {props.fruits.length === 0 && <p>No cities to display</p>}
       <ul className="list-group">
-        {cities.map((city, index) => {
+        {props.fruits.map((fruit, index) => {
           return (
             <li
               className={
@@ -24,7 +28,7 @@ function MenuSideBar() {
               key={index}
               onClick={() => setSelectedIndex(index)}
             >
-              {city}
+              {fruit}
             </li>
           );
         })}
