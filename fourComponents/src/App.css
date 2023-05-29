@@ -4,3 +4,10 @@ body {
 .outer-layer {
   width: 100%;
 }
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}

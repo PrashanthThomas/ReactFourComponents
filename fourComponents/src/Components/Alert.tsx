@@ -5,8 +5,8 @@ interface Props {
 }
 const Alert = (props: Props) => {
   return (
-    <div className="alert alert-primary" role="alert">
-      {props.children}
+    <div className="alert alert-primary alert-dismissible" role="alert">
+      <p>{props.children}</p>
     </div>
   );
 };
