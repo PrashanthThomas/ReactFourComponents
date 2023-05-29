@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import ButtonLayout, { ButtonConfig } from "./Components/ButtonLayout";
 import Alert from "./Components/Alert";
 import { useState } from "react";
+import Afterlogin from "./AfterLogin";
 
 function App() {
   let [alertMsg, setAlertMsg] = useState("");
@@ -64,7 +65,7 @@ function App() {
 
   return (
     <div className="outer-layer">
-      {alertMsg && (
+      {/* {alertMsg && (
         <Alert>
           <h1>{alertMsg}</h1>
           <button
@@ -79,13 +80,14 @@ function App() {
       <ButtonLayout
         buttonConfigList={buttonConfigList}
         title="List of Buttons"
-      ></ButtonLayout>
+      ></ButtonLayout> */}
       {/* <ClickCounter></ClickCounter>
       <CustomHeader></CustomHeader>
       <MenuSideBar title="Fruit list" fruits={fruits}></MenuSideBar>
       <DynamicBody title="City list" cities={cities}></DynamicBody>
       <CustomFooter></CustomFooter>
       <Message message="Hi"></Message> */}
+      <Afterlogin></Afterlogin>
     </div>
   );
 }
